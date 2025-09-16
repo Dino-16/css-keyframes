@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fade keyframes</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: black;
+            color: white;
+        }
+        .div1 {
+            font-size: 32px;
+            font-weight: 700;
+            padding: 20px;
+            animation: slideLeft 10s forwards;
+            text-shadow: 
+            0 0 5px #0ff,
+            0 0 10px #0ff,
+            0 0 20px #0ff,
+            0 0 40px #0ff;
+        }
+        .div2 {
+            font-size: 32px;
+            font-weight: 700;
+            animation: slideRight 10s forwards;
+            text-shadow: 
+            0 0 5px #0ff,
+            0 0 10px #0ff,
+            0 0 20px #0ff,
+            0 0 40px #0ff;
+        }
+        @keyframes slideLeft {
+            from {
+                transform: translateX(-100%);
+            }
+
+            to {
+                transform: translateX(0);
+            }
+        }
+        @keyframes slideRight {
+            from {
+                transform: translateX(100%);
+            }
+            to {
+                transform: translateX(0);
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="div1">Hello</div>
+    <div class="div2">World</div>
+</body>
+</html>
